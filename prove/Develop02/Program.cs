@@ -45,7 +45,5 @@ class Program
                     break;
             }
         }
-
-        Console.WriteLine("Hello Develop02 World!");
     }
 }

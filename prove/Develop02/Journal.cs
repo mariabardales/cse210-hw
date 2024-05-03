@@ -55,6 +55,7 @@ public class Journal
             newEntryLoad._promptText = prompt;
             newEntryLoad._entryText = entry;
             newEntryLoad._date = date;
+            _entries.Add(newEntryLoad);
         }
     }
 }

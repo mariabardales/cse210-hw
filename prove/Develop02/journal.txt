@@ -1,8 +1,11 @@
-What was the most interesting emotion today?,r1,2/05/2024
-What was the most interesting emotion today?,r2,2/05/2024
-Who should I remember?,r3,2/05/2024
-Who should I remember?,r4,2/05/2024
-Who should I remember?,r29383,2/05/2024
-Who should I remember?,r4,2/05/2024
-What lesson did I learn today?,r333,2/05/2024
-What was the best part of my day?,r234,2/05/2024
+What lesson did I learn today?,A1,3/05/2024
+What spiritual experience did I have today?,A2,3/05/2024
+What spiritual experience did I have today?,A3,3/05/2024
+What spiritual experience did I have today?,A4,3/05/2024
+What was the best part of my day?,A5,3/05/2024
+Who should I remember?,A6,3/05/2024
+What lesson did I learn today?,A7,3/05/2024
+Who should I remember?,A8,3/05/2024
+What was the most interesting emotion today?,A9,3/05/2024
+What spiritual experience did I have today?,A10,3/05/2024
+What lesson did I learn today?,A11,3/05/2024
