@@ -1,0 +1,8 @@
+What was the most interesting emotion today?,r1,2/05/2024
+What was the most interesting emotion today?,r2,2/05/2024
+Who should I remember?,r3,2/05/2024
+Who should I remember?,r4,2/05/2024
+Who should I remember?,r29383,2/05/2024
+Who should I remember?,r4,2/05/2024
+What lesson did I learn today?,r333,2/05/2024
+What was the best part of my day?,r234,2/05/2024
