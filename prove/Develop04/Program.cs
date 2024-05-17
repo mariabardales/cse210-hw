@@ -1,5 +1,9 @@
 using System;
 
+//The program exceeds the core requirements:
+//I have added an activity called Exercises Activity, it consists of giving 
+//ideas of physical exercises to do and shows the ideas randomly until the 
+//time entered by the user.
 class Program
 {
     static void Main(string[] args)
