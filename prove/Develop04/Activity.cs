@@ -4,73 +4,68 @@ public class Activity
 {
     protected string _name;
     protected string _description;
-    private int _duration;
+    protected int _duration;
     public Activity()
     {
+        _name="";
+        _description="";
+        _duration=0;
     }
     public void DisplayStartingMessage()
     {
-        Console.WriteLine("Welcome to the Activity Menu!");
-        Console.WriteLine("Menu Options:");
-        Console.WriteLine(" 1. Start breathing activity");
-        Console.WriteLine(" 2. Start reflecting activity");
-        Console.WriteLine(" 3. Start listing activity");
-        Console.WriteLine(" 4. Quit");
-        Console.Write("Select a choice from the menu: ");
-
-        string choice = Console.ReadLine();
-
         Console.WriteLine($"Welcome to the {_name} Activity");
+        Console.WriteLine(" ");
         Console.WriteLine(_description);
+        Console.WriteLine(" ");
         Console.Write("Please enter the duration for this activity (in seconds): ");
         _duration = int.Parse(Console.ReadLine());
-        switch (choice)
-        {
-            case "1":
-                BreathingActivity breathingActivity = new BreathingActivity();
-                Console.WriteLine($"Welcome to the {breathingActivity.GetName()} Activity");
-                Console.WriteLine(breathingActivity.GetDescription());
-                Console.Write("Please enter the duration for this activity (in seconds): ");
-                _duration = int.Parse(Console.ReadLine());
-                breathingActivity.Run();
-                break;
-            case "2":
-                ReflectingActivity reflectingActivity = new ReflectingActivity();
-                Console.WriteLine($"Welcome to the {reflectingActivity.GetName()} Activity");
-                Console.WriteLine(reflectingActivity.GetDescription());
-                Console.Write("Please enter the duration for this activity (in seconds): ");
-                _duration = int.Parse(Console.ReadLine());
-                reflectingActivity.Run();
-                break;
-            case "3":
-                ListingActivity listingActivity = new ListingActivity();
-                Console.WriteLine($"Welcome to the {listingActivity.GetName()} Activity");
-                Console.WriteLine(listingActivity.GetDescription());
-                Console.Write("Please enter the duration for this activity (in seconds): ");
-                _duration = int.Parse(Console.ReadLine());
-                listingActivity.Run();
-                break;
-            case "4":
-                Console.WriteLine("Quitting...");
-                break;
-            default:
-                Console.WriteLine("Invalid choice. Please select a valid option.");
-                DisplayStartingMessage();
-                break;
-        }
-
-
+        Console.Clear();
+        Console.WriteLine("Get ready!");
+        Showspinner(3);
+        Console.WriteLine(" ");
     }
     public void DisplayEndingMessage()
     {
-
+        Console.WriteLine($"Well done!!");
+        Console.WriteLine($" ");
+        Showspinner(3);
+        Console.WriteLine($"You have completed another {_duration} seconds of the {_name}");
+        Showspinner(3);
+        Console.Clear();
     }
     public void Showspinner(int seconds)
     {
+        List<string> animation=new List<string>();
+        animation.Add("»");
+        animation.Add("»");
+        animation.Add("«");
+        animation.Add("«");
 
+        DateTime startTime = DateTime.Now;
+        DateTime endTime = startTime.AddSeconds(seconds);
+
+        int i =0;
+        while(DateTime.Now<endTime)
+        {
+            string s = animation[i];
+            Console.Write(s);
+            Thread.Sleep(1000);
+            Console.Write("\b \b");
+            i++;
+            if (i>=animation.Count)
+            {
+                i=0;
+            }
+        }
     }
     public void ShowCountDown(int seconds)
-    {
-
+    {     
+        for (int i=1;i<seconds;i++)
+        {
+            Console.Write(i);
+            Thread.Sleep(1000);
+            Console.Write("\b \b");
+        }
+        Console.WriteLine(" ");
     }
 }

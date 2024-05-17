@@ -8,15 +8,19 @@ public class BreathingActivity:Activity
     }
     public void Run()
     {
-        Console.Write("Breathing 1");
-    }
-    public string GetName()
-    {
-        return _name;
-    }
+        DisplayStartingMessage();
+        DateTime startTime = DateTime.Now;
+        DateTime stopTime =startTime.AddSeconds(_duration);
 
-    public string GetDescription()
-    {
-        return _description;
+        do{
+            Console.WriteLine("Breathe In");
+            ShowCountDown(5);
+
+            Console.WriteLine("Breathe Out");
+            ShowCountDown(5);
+        }
+        while(DateTime.Now<stopTime);
+
+        DisplayEndingMessage();
     }
 }
